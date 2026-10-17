@@ -4,7 +4,7 @@
 
 ---
 
-1. Fichier : `$ARGUMENTS`, sinon liste `videos/a-monter/` et demande.
+1. Fichier : `$ARGUMENTS`, ou la vidéo jointe à la conversation (copie-la d'abord dans `videos/a-monter/`), sinon liste `videos/a-monter/` et demande.
 2. `node scripts/coupe-blancs.mjs -i <rush> --plan` et annonce le temps gagné et le nombre de coupes.
 3. Lance la coupe vers `videos/en-cours/<nom>.coupe.mp4`.
 4. Si l'utilisateur trouve le résultat trop haché ou trop lent, ajuste (voir `context/MONTAGE.md`) :
@@ -18,4 +18,4 @@ Fichier prêt pour CapCut : videos/en-cours/<nom>.coupe.mp4
 Dans CapCut : Nouveau projet > importe ce fichier > Texte > Sous-titres automatiques (langue : français).
 ```
 
-Propose de noter le réglage final dans `context/MONTAGE.md` s'il diffère du défaut.
+Envoie le fichier coupé à l'utilisateur (outil SendUserFile). Propose de noter le réglage final dans `context/MONTAGE.md` s'il diffère du défaut.

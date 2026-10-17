@@ -10,10 +10,10 @@ Lis `CLAUDE.md`, `context/MONTAGE.md` et les dernières entrées de `context/HIS
 
 ## Étape 2 : Trouver le rush
 
-Si `$ARGUMENTS` donne un fichier, utilise-le. Sinon liste `videos/a-monter/` et demande lequel monter. S'il est vide :
+Si `$ARGUMENTS` donne un fichier, utilise-le. Si une vidéo a été jointe à la conversation (iPad, téléphone), copie-la dans `videos/a-monter/` avec un nom court sans espaces. Sinon liste `videos/a-monter/` et demande lequel monter. S'il est vide :
 
 ```
-Dépose ta vidéo dans videos/a-monter/ (ou donne-moi son chemin), puis relance /monter.
+Joins ta vidéo à ce message (trombone) ou dépose-la dans videos/a-monter/, puis relance /monter.
 ```
 
 ## Étape 3 : Examiner
@@ -49,7 +49,7 @@ Vidéo prête :
 Durée : [avant] -> [après]
 ```
 
-Puis enchaîne sur `/legende`, et ajoute une entrée dans `context/HISTORY.md`.
+Envoie les fichiers finis à l'utilisateur (outil SendUserFile) pour qu'il les enregistre sur son appareil. Puis enchaîne sur `/legende`, ajoute une entrée dans `context/HISTORY.md`, et en session cloud commit + push `context/` (les vidéos restent hors de git) pour que la charte et le journal ne soient pas perdus.
 
 ---
 

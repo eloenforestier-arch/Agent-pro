@@ -124,6 +124,13 @@ Prérequis : Node.js 22+, ffmpeg. Le CLI s'utilise avec `npx hyperframes ...` (t
 
 ---
 
+## Utilisation depuis un iPad (session cloud)
+
+Depuis l'iPad, l'agent tourne sur un serveur cloud (ffmpeg et Node déjà présents) :
+- la vidéo arrive en pièce jointe : copie-la dans `videos/a-monter/` avant de travailler
+- renvoie chaque fichier fini avec l'outil SendUserFile
+- le serveur est effacé après inactivité : à la fin de chaque session, commit + push de `context/` (jamais les vidéos)
+
 ## Mémoire
 
 Quand l'utilisateur valide un réglage durable (seuil de coupe, style de sous-titres, couleurs, police, musique, hashtags qui marchent), propose de l'écrire dans `context/MONTAGE.md`, puis ajoute une ligne dans `context/HISTORY.md`. Après chaque vidéo exportée, ajoute une entrée dans `HISTORY.md` (nom, durée avant/après, réglages utilisés).
