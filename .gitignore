@@ -1,0 +1,8 @@
+# Vidéos et fichiers de travail (trop lourds pour git)
+videos/**/*
+!videos/**/
+!videos/**/.gitkeep
+
+node_modules/
+.DS_Store
+*.log

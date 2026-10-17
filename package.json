@@ -1,0 +1,15 @@
+{
+  "name": "agent-pro",
+  "private": true,
+  "description": "Agent de montage vidéo pour TikTok et Instagram Reels",
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "blancs": "node scripts/coupe-blancs.mjs",
+    "mots": "node scripts/mots-a-surveiller.mjs",
+    "export": "node scripts/export-reseaux.mjs",
+    "verifier": "node scripts/verifier.mjs"
+  }
+}
